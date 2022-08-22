@@ -3,17 +3,16 @@ package cn.spider.design.behavior.strategy.promotion;
 import com.google.common.collect.Maps;
 
 import java.util.Map;
-import java.util.Set;
 
 public class PromotionStrategyFactory {
     private static Map<String, PromotionStrategy> psMap = Maps.newHashMap();
 
     static {
-        psMap.put(PromotionKey.FOO, new PromotionStrategyFoo());
-        psMap.put(PromotionKey.BAR, new PromotionStrategyBar());
+        psMap.put(PromotionKey.FOO, new PromotionStrategy.PromotionStrategyFoo());
+        psMap.put(PromotionKey.BAR, new PromotionStrategy.PromotionStrategyBar());
     }
 
-    public static final PromotionStrategy emptyStrategy = new DefaultPromotionStrategy();
+    public static final PromotionStrategy emptyStrategy = new PromotionStrategy.DefaultPromotionStrategy();
 
     private PromotionStrategyFactory() {
     }

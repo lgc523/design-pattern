@@ -1,9 +1,9 @@
 package cn.spider.design.behavior.strategy.promotion;
 
-public class PromotionStrategyTest {
+public class TestPromotionStrategy {
     public static void main(String[] args) {
-        PromotionStrategyContext sFoo = new PromotionStrategyContext(new PromotionStrategyFoo());
-        PromotionStrategyContext sBar = new PromotionStrategyContext(new PromotionStrategyBar());
+        PromotionStrategyContext sFoo = new PromotionStrategyContext(new PromotionStrategy.PromotionStrategyFoo());
+        PromotionStrategyContext sBar = new PromotionStrategyContext(new PromotionStrategy.PromotionStrategyBar());
         sFoo.doPromotion();
         sBar.doPromotion();
 

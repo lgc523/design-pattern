@@ -11,11 +11,11 @@ public class Cashier {
         this.amount = amount;
     }
 
-    public PaymentResult pay() {
+    public Payment.PaymentResult pay() {
         return pay(PaymentStrategy.default_payment);
     }
 
-    public PaymentResult pay(String paymentRoute) {
+    public Payment.PaymentResult pay(String paymentRoute) {
         Payment payment = PaymentStrategy.get(paymentRoute);
         System.out.println("welcome to advanced intelligent cashier system!\n支付方式:" + payment.getRoute());
         System.out.println("本次交易金额: " + this.amount + "\n开始扣款...\n等待系统确认...");
